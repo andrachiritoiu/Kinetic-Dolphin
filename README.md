@@ -32,6 +32,6 @@ The tulip is designed from scratch using CAD software. Twisting the stem rotates
 
 ## Pictures
 
-![Mechanical Tulip](tulip.jpg)
+![Mechanical Tulip](tulip.png)
 
 ---
