@@ -53,5 +53,4 @@ The tail fin required special attention as it has the largest range of motion an
 ## Credits
 
 > This project was designed and built as a final project for the CAD & 3D Printing university course.
->
-> *Note: Estimated time — X hours to model, Y hours to print, Z hours to assemble and test.*
+
