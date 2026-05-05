@@ -46,7 +46,7 @@ The tail fin required special attention as it has the largest range of motion an
 
 ## Pictures
 
->![Kinetic Dolphin](images/dolphin.jpeg)
+>![Kinetic Dolphin](images/dolphin.jpg)
 
 ---
 
