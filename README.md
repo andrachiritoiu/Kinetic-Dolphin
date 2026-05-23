@@ -233,7 +233,7 @@ The result is a mechanical wave travelling through the dolphin body from head to
 
 > Final pictures of the printed and assembled mechanism will be added here.
 
-![Kinetic Dolphin](images/dolphin.jpg)
+![Kinetic Dolphin](images/cad-dolphin.png)
 
 ---
 
