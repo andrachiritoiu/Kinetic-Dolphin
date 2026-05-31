@@ -304,6 +304,16 @@ The result is a mechanical wave travelling through the dolphin body from head to
 
 ---
 
+## Demo Video
+
+> 🎬 **[Watch the motion study and assembly walkthrough on YouTube →](https://youtube.com/YOUR_LINK_HERE)**
+
+The video showcases:
+- Fusion 360 motion link animation (cam rotation → follower movement → wave motion)
+- Full assembly sequence in CAD
+- Expected swimming motion when the crank is turned
+  
+
 ## Current Status
 
 ### Completed
@@ -324,7 +334,7 @@ The result is a mechanical wave travelling through the dolphin body from head to
 
 > Final pictures of the printed and assembled mechanism will be added here.
 
-![Kinetic Dolphin CAD](images/dolphin.png)
+![Kinetic Dolphin CAD](images/dolphin.jpg)
 
 
 ## References
@@ -337,15 +347,6 @@ The result is a mechanical wave travelling through the dolphin body from head to
 - PrusaSlicer / Cura — slicing software
 
 ---
-
-## Demo Video
-
-> 🎬 **[Watch the motion study and assembly walkthrough on YouTube →](https://youtube.com/YOUR_LINK_HERE)**
-
-The video showcases:
-- Fusion 360 motion link animation (cam rotation → follower movement → wave motion)
-- Full assembly sequence in CAD
-- Expected swimming motion when the crank is turned
 
   
 
