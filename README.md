@@ -332,12 +332,6 @@ The video showcases:
 
 ---
 
-## Pictures
-
-> Final pictures of the printed and assembled mechanism will be added here.
-
-![Kinetic Dolphin CAD](images/dolphin.jpg)
-
 
 ## References
 
@@ -349,6 +343,12 @@ The video showcases:
 - PrusaSlicer / Cura — slicing software
 
 ---
+## Pictures
+
+![Kinetic Dolphin CAD](images/dolphin.jpg)
+
+----
+
 
   
 
