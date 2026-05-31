@@ -73,33 +73,35 @@ Wave-like swimming motion
 | `Project/kinetic-dolphin.f3d` | Full Fusion 360 assembly |
 
 ### STL Files
+
+All printable components were exported as a single STL file containing the full assembly:
+
 | File | Description |
 |------|-------------|
-| `Project/STL/Frame_Base.stl` | Main frame base |
-| `Project/STL/Left_Column.stl` | Left support column |
-| `Project/STL/Right_Column.stl` | Right support column |
-| `Project/STL/Top_Bar.stl` | Top bar connecting the two columns |
-| `Project/STL/Central_Shaft.stl` | Central rotating shaft |
-| `Project/STL/Cam_01_0deg.stl` | Cam 1 — 0° offset (Head) |
-| `Project/STL/Cam_02_90deg.stl` | Cam 2 — 90° offset (Middle 1) |
-| `Project/STL/Cam_03_180deg.stl` | Cam 3 — 180° offset (Middle 2) |
-| `Project/STL/Cam_04_270deg.stl` | Cam 4 — 270° offset (Tail) |
-| `Project/STL/Follower_01.stl` | Vertical follower 1 |
-| `Project/STL/Follower_02.stl` | Vertical follower 2 |
-| `Project/STL/Follower_03.stl` | Vertical follower 3 |
-| `Project/STL/Follower_04.stl` | Vertical follower 4 |
-| `Project/STL/Dolphin_Head.stl` | Head segment |
-| `Project/STL/Dolphin_Segment_01.stl` | Middle body segment 1 |
-| `Project/STL/Dolphin_Segment_02.stl` | Middle body segment 2 |
-| `Project/STL/Dolphin_Tail_Segment.stl` | Tail segment |
-| `Project/STL/Top_Spine_Rod.stl` | Spine rod along top of body |
-| `Project/STL/Hinge_Pin_02_03.stl` | Hinge pin between segments (×3) |
-| `Project/STL/Hinge_Pin_01.stl` | Hinge pin 1 |
-| `Project/STL/Hinge_Pin_02.stl` | Hinge pin 2 |
-| `Project/STL/HingePin03.stl` | Hinge pin 3 |
-| `Project/STL/HingePin04.stl` | Hinge pin 4 |
-| `Project/STL/Pin_Guide_Lower_Support.stl` | Lower guide support for follower pins |
-| `Project/STL/CMP_L_Shaped_Crank_Handle.stl` | L-shaped crank handle |
+| `Project/STL/Kinetic_Dolphin_All_Parts.stl` | Full assembly — all printable components |
+
+The individual components in Fusion 360 that make up this file are:
+
+| Component (Fusion 360) | Description |
+|------------------------|-------------|
+| `Frame_Base` | Main frame base |
+| `Left_Column` | Left support column |
+| `Right_Column` | Right support column |
+| `Top_Bar` | Top bar connecting the two columns |
+| `Central_Shaft` | Central rotating shaft |
+| `Cam_01_0deg` | Cam 1 — 0° offset (Head) |
+| `Cam_02_90deg` | Cam 2 — 90° offset (Middle 1) |
+| `Cam_03_180deg` | Cam 3 — 180° offset (Middle 2) |
+| `Cam_04_270deg` | Cam 4 — 270° offset (Tail) |
+| `Follower_01` – `Follower_04` | Vertical followers (×4) |
+| `Dolphin_Head` | Head segment |
+| `Dolphin_Segment_01` / `Dolphin_Segment_02` | Middle body segments |
+| `Dolphin_Tail_Segment` | Tail segment |
+| `Top_Spine_Rod` | Spine rod along top of body |
+| `Hinge_Pin_01` – `HingePin04` | Hinge pins for body segments (×4) |
+| `Hinge_Pin_02_03` | Hinge pin between segments (×3) |
+| `Pin_Guide_Lower_Support` | Lower guide support for follower pins |
+| `CMP_L_Shaped_Crank_Handle` | L-shaped crank handle |
 
 ### G-Code Files
 | File | Description |
