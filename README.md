@@ -11,6 +11,15 @@
 **Kinetic Dolphin** converts rotational motion into a smooth, sequential wave-like movement of a segmented dolphin body. The user turns a crank, which rotates a central shaft carrying four cams. Each cam is offset by 90°, causing body segments to move one after another — simulating natural swimming.
 
 ---
+## Pictures
+
+
+### CAD Render
+
+![Kinetic Dolphin - Front View](Render/Dolphin_1.png)
+
+![Kinetic Dolphin - Side View](Render/Dolphin_2.png)
+
 
 ## How It Works
 
@@ -41,19 +50,88 @@ Wave-like swimming motion
 
 ---
 
+## Repository Structure
+
+```
+📁 Project/
+   ├── kinetic-dolphin.f3d          ← Fusion 360 source file
+   ├── STL/                         ← All printable parts as .stl
+   └── GCODE/                       ← Sliced files ready for printing
+📁 Sketches/                        ← Early sketches and ideation
+📁 images/                          ← CAD screenshots and photos
+    Final Project Requirements.pdf
+    README.md
+```
+
+---
+
+## Project Files
+
+### Fusion 360 Source
+| File | Description |
+|------|-------------|
+| `Project/kinetic-dolphin.f3d` | Full Fusion 360 assembly |
+
+### STL Files
+| File | Description |
+|------|-------------|
+| `Project/STL/Frame_Base.stl` | Main frame base |
+| `Project/STL/Left_Column.stl` | Left support column |
+| `Project/STL/Right_Column.stl` | Right support column |
+| `Project/STL/Top_Bar.stl` | Top bar connecting the two columns |
+| `Project/STL/Central_Shaft.stl` | Central rotating shaft |
+| `Project/STL/Cam_01_0deg.stl` | Cam 1 — 0° offset (Head) |
+| `Project/STL/Cam_02_90deg.stl` | Cam 2 — 90° offset (Middle 1) |
+| `Project/STL/Cam_03_180deg.stl` | Cam 3 — 180° offset (Middle 2) |
+| `Project/STL/Cam_04_270deg.stl` | Cam 4 — 270° offset (Tail) |
+| `Project/STL/Follower_01.stl` | Vertical follower 1 |
+| `Project/STL/Follower_02.stl` | Vertical follower 2 |
+| `Project/STL/Follower_03.stl` | Vertical follower 3 |
+| `Project/STL/Follower_04.stl` | Vertical follower 4 |
+| `Project/STL/Dolphin_Head.stl` | Head segment |
+| `Project/STL/Dolphin_Segment_01.stl` | Middle body segment 1 |
+| `Project/STL/Dolphin_Segment_02.stl` | Middle body segment 2 |
+| `Project/STL/Dolphin_Tail_Segment.stl` | Tail segment |
+| `Project/STL/Top_Spine_Rod.stl` | Spine rod along top of body |
+| `Project/STL/Hinge_Pin_02_03.stl` | Hinge pin between segments (×3) |
+| `Project/STL/Hinge_Pin_01.stl` | Hinge pin 1 |
+| `Project/STL/Hinge_Pin_02.stl` | Hinge pin 2 |
+| `Project/STL/HingePin03.stl` | Hinge pin 3 |
+| `Project/STL/HingePin04.stl` | Hinge pin 4 |
+| `Project/STL/Pin_Guide_Lower_Support.stl` | Lower guide support for follower pins |
+| `Project/STL/CMP_L_Shaped_Crank_Handle.stl` | L-shaped crank handle |
+
+### G-Code Files
+| File | Description |
+|------|-------------|
+| `Project/GCODE/Frame_Base.gcode` | Sliced — frame base |
+| `Project/GCODE/Columns_Top_Bar.gcode` | Sliced — left column, right column, top bar |
+| `Project/GCODE/Central_Shaft.gcode` | Sliced — central shaft |
+| `Project/GCODE/Cams.gcode` | Sliced — all 4 cams |
+| `Project/GCODE/Followers.gcode` | Sliced — all 4 followers |
+| `Project/GCODE/Body_Segments.gcode` | Sliced — head, 2× middle, tail |
+| `Project/GCODE/Spine_and_Pins.gcode` | Sliced — spine rod + all hinge pins |
+| `Project/GCODE/Crank_Handle.gcode` | Sliced — L-shaped crank handle |
+
+---
+
 ## Main Components
 
 | Part | Qty | Role |
 |------|-----|------|
-| Crank handle | ×1 | Manual input — rotates the mechanism |
-| Central shaft | ×1 | Transfers rotation to all cams |
-| Cams | ×4 | Push followers at staggered moments |
-| Followers | ×4 | Convert cam rotation into vertical motion |
-| Body segments | ×4 | Move sequentially to create the swimming effect |
-| Hinge pins (body) | ×3 | Connect segments while allowing rotation |
-| Follower pins | ×4 | Connect each follower to its corresponding segment |
-| Frame | ×1 | Supports and aligns the full mechanism |
-| Base | ×1 | Provides stability for the entire assembly |
+| `CMP_L_Shaped_Crank_Handle` | ×1 | Manual input — rotates the mechanism |
+| `Central_Shaft` | ×1 | Transfers rotation to all cams |
+| `Cam_01_0deg` – `Cam_04_270deg` | ×4 | Push followers at staggered 90° intervals |
+| `Follower_01` – `Follower_04` | ×4 | Convert cam rotation into vertical motion |
+| `Dolphin_Head` | ×1 | Front body segment — first to move |
+| `Dolphin_Segment_01` / `Dolphin_Segment_02` | ×2 | Middle body segments |
+| `Dolphin_Tail_Segment` | ×1 | Rear segment — last to move |
+| `Top_Spine_Rod` | ×1 | Structural rod along the top of the dolphin body |
+| `Hinge_Pin_02_03` | ×3 | Connect adjacent body segments (revolute joint) |
+| `Hinge_Pin_01` – `HingePin04` | ×4 | Connect followers to body segments |
+| `Pin_Guide_Lower_Support` | ×1 | Guides the lower end of follower pins |
+| `Frame_Base` | ×1 | Ground plate — provides stability |
+| `Left_Column` + `Right_Column` + `Top_Bar` | ×3 | Frame structure — supports and aligns the mechanism |
 
 ---
 
@@ -118,6 +196,31 @@ Cam 4: 270° →  ●───
 | Body segment rotation limit | ±12° to ±15° |
 
 > **Note:** Holes are always 0.4 mm larger than pins to allow free movement after 3D printing.
+
+---
+
+## Print Orientation & Printability Notes
+
+Each component was designed with printing orientation in mind to minimise supports and maximise strength:
+
+| Part | Recommended Orientation | Supports Needed | Notes |
+|------|------------------------|-----------------|-------|
+| `Frame_Base` | Flat on bed | None | Large flat bottom — no supports required |
+| `Left_Column` / `Right_Column` | Upright | Minimal | Vertical walls print cleanly |
+| `Top_Bar` | Flat on bed | None | Low profile, no overhangs |
+| `Central_Shaft` | Horizontal along X axis | None | Cylindrical — no overhangs when laid flat |
+| `Cam_01`–`Cam_04` | Flat (lobe facing up) | None | Chamfered edges reduce elephant foot |
+| `Follower_01`–`Follower_04` | Vertical (guide slot up) | None | Avoids support inside the guide channel |
+| `Dolphin_Head` / segments | Flat on belly side | Minimal | Filleted edges reduce stringing |
+| `Top_Spine_Rod` | Horizontal | None | Thin rod — lay flat for strength |
+| Hinge pins | Vertical | None | Small cylinders — upright for best layer bonding |
+| `CMP_L_Shaped_Crank_Handle` | Upright | None | Chamfer at base for clean bed adhesion |
+
+> **General rules applied:**
+> - All pin holes include 0.4 mm clearance to account for FDM shrinkage
+> - Edges are chamfered / filleted throughout to improve layer adhesion at corners
+> - No single component exceeds a standard 220 × 220 mm build plate
+> - Bodies are split into separate components so each can be oriented independently
 
 ---
 
@@ -192,8 +295,9 @@ The result is a mechanical wave travelling through the dolphin body from head to
 
 - PLA or PETG filament
 - 3D printer
-- CAD software
-- Small metal or printed pins
+- Autodesk Fusion 360 (CAD & motion study)
+- PrusaSlicer / Cura (slicing)
+- Small metal or printed pins (2.0 mm diameter)
 - Sandpaper or file for cleaning holes
 - Optional lubricant for smoother movement
 - Optional metal rod for the central shaft
@@ -205,27 +309,14 @@ The result is a mechanical wave travelling through the dolphin body from head to
 ### Completed
 - Main frame and base
 - Central shaft
-- Four cams
+- Four cams (with correct 90° offsets)
 - Four followers
 - Four dolphin body segments
 - Hinge connections between body segments
 - Follower-to-segment pin connections
-
-### Next Steps
-- [ ] Final tolerance checking
-- [ ] Testing follower movement
-- [ ] Adjusting cam positions
-- [ ] Exporting parts for 3D printing
-- [ ] Assembling and testing the physical model
-
----
-
-## References
-
-- [Save the Whales Kinetic Sculpture](https://www.youtube.com/watch?v=XO6ccPXwV70) — YouTube inspiration
-- [Kinetic Whale](https://www.thingiverse.com/thing:3932765) — Thingiverse mechanism reference
-- [Save the Whales](https://www.myminifactory.com/object/3d-print-save-the-whales-kinetic-whales-59557) — MyMiniFactory reference
-- [Cam Mechanism Examples](https://www.printables.com/model/490289-cam-mechanism-examples) — Printables reference
+- Top spine rod
+- Pin guide lower support
+- L-shaped crank handle
 
 ---
 
@@ -233,11 +324,32 @@ The result is a mechanical wave travelling through the dolphin body from head to
 
 > Final pictures of the printed and assembled mechanism will be added here.
 
-![Kinetic Dolphin](images/cad-dolphin.png)
+![Kinetic Dolphin CAD](images/cad-dolphin.png)
+
+
+## References
+
+- [Save the Whales Kinetic Sculpture](https://www.youtube.com/watch?v=XO6ccPXwV70) — YouTube inspiration
+- [Kinetic Whale](https://www.thingiverse.com/thing:3932765) — Thingiverse mechanism reference
+- [Save the Whales](https://www.myminifactory.com/object/3d-print-save-the-whales-kinetic-whales-59557) — MyMiniFactory reference
+- [Cam Mechanism Examples](https://www.printables.com/model/490289-cam-mechanism-examples) — Printables reference
+- Autodesk Fusion 360 — CAD & motion study software
+- PrusaSlicer / Cura — slicing software
 
 ---
 
+## Demo Video
+
+> 🎬 **[Watch the motion study and assembly walkthrough on YouTube →](https://youtube.com/YOUR_LINK_HERE)**
+
+The video showcases:
+- Fusion 360 motion link animation (cam rotation → follower movement → wave motion)
+- Full assembly sequence in CAD
+- Expected swimming motion when the crank is turned
+
+  
+
 ## Credits
 
-Designed and built as a final project for the **CAD & 3D Printing** university course.
+Designed and built as a final project for the **CAD & 3D Printing** university course — Unibuc Robotics 2025–2026.  
 Inspired by kinetic animal sculptures and cam-driven mechanical models.
