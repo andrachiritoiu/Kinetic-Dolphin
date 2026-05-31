@@ -1,4 +1,4 @@
-# 🐬 Kinetic Dolphin
+# Kinetic Dolphin
 
 > A 3D-printed mechanical sculpture that simulates dolphin swimming using a cam-driven mechanism — no electronics, no motors, no code.
 
@@ -324,7 +324,7 @@ The result is a mechanical wave travelling through the dolphin body from head to
 
 > Final pictures of the printed and assembled mechanism will be added here.
 
-![Kinetic Dolphin CAD](images/cad-dolphin.png)
+![Kinetic Dolphin CAD](images/dolphin.png)
 
 
 ## References
