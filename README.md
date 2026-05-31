@@ -20,6 +20,10 @@
 
 ![Kinetic Dolphin - Side View](Render/Dolphin_2.png)
 
+![Kinetic Dolphin - Front View](Render/Dolphin_3.png)
+
+![Kinetic Dolphin - Side View](Render/Dolphin_4.png)
+
 
 ## How It Works
 
