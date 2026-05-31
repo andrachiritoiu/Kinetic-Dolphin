@@ -316,7 +316,7 @@ The result is a mechanical wave travelling through the dolphin body from head to
 
 ## Demo Video
 
-> 🎬 **[Watch the motion study and assembly walkthrough on YouTube →](https://youtube.com/YOUR_LINK_HERE)**
+> 🎬 **[Watch the motion study and assembly walkthrough on YouTube →]([https://youtube.com/YOUR_LINK_HERE](https://youtu.be/-M1nDBFTdhY))**
 
 The video showcases:
 - Fusion 360 motion link animation (cam rotation → follower movement → wave motion)
